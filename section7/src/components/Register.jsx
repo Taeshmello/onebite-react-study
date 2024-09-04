@@ -22,10 +22,7 @@ const Register = () => {
 
     const countRef = useRef(0);
     const inputRef = useRef();
-
-
-
-
+    
     const onChange = (e) =>{{
         countRef.current++;
         console.log(countRef.current)
@@ -34,18 +31,13 @@ const Register = () => {
             [e.target.name]:e.target.value,
         })
     }};
-
+    
     const onSubmit = () => {
         if(input.name === ""){
             inputRef.current.focus();
             
         }
     };
-    
-
-    
-    
-  
     return(
     <div>
         <div>
@@ -76,14 +68,12 @@ const Register = () => {
                 <option value={countryList.bz}>브라질</option>
             </select>
         </div>
-        
         <div>
             <textarea name='bio' 
             value={input.bio} 
             onChange={onChange}/>
             {input.bio}
         </div>
-
         <button onClick={onSubmit}>제출 버튼</button>
     </div>
     )
