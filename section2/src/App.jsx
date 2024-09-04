@@ -11,7 +11,7 @@ function App() {
     <Button text={"메일"} color={"blue"}/>
     <Button text={"카페"}/>
     <Button text={"블로그"} 
-   ><div>엄준식</div></Button>
+    onclick={<div>엄준식</div>}/>
     </>
   )
 }
